@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+.dashboard-component {
+    @apply relative;
+}
+.dashboard-component .container-decoration {
+    @apply absolute inset-px rounded-lg bg-white;
+}
+.dashboard-component .container-distribution {
+    @apply relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)];
+}
+.dashboard-component h3 {
+    @apply text-sm/4 font-semibold text-indigo-600;
+}
+.dashboard-component .data {
+    @apply mt-2 text-lg font-medium tracking-tight text-gray-950;
+}
+.dashboard-component .description {
+    @apply mt-2 max-w-lg text-sm/6 text-gray-600;
+}
