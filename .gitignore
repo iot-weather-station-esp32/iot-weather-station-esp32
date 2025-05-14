@@ -1,4 +1,84 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+/web-app/weather-dashboard/node_modules
+####################################
+# Node / npm / Yarn / PNPM        #
+####################################
+node_modules/
+# lock-files – keep the one you actually use
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# npm/Yarn/PNPM debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+####################################
+# Environment variables           #
+####################################
+# Keep a public example committed (.env.example)
+.env*
+!.env.example
+
+####################################
+# Build & cache output            #
+####################################
+# Vite / React / TS
+.dist/
+dist/
+build/
+.cache/
+.vite/
+.react-router/
+
+# Coverage reports
+coverage/
+
+####################################
+# TypeScript build info           #
+####################################
+*.tsbuildinfo
+
+####################################
+# Testing                         #
+####################################
+# Cypress
+cypress/videos/
+cypress/screenshots/
+# Jest
+jest-html-reporters-*/
+
+####################################
+# IDE / Editor settings           #
+####################################
+.vscode/
+.idea/
+*.sw?
+
+####################################
+# ESP32 / Arduino firmware        #
+####################################
+# PlatformIO & Arduino build artefacts
+firmware/IOT-Weather-Station/build/
+firmware/IOT-Weather-Station/.pio/
+# External libraries cloned into repo
+firmware/IOT-Weather-Station/libraries/
+
+####################################
+# Firebase & secrets              #
+####################################
+# Match any generated Firebase admin SDK credential
+*firebase-adminsdk-*.json
+# Explicit secrets
 TOKENS-CREDENTIALS.h
-**/.DS_Store
-iot-weather-station-esp32-firebase-adminsdk-fbsvc-8d1a91cf80.json
-/firmware/IOT-Weather-Station/libraries
+
+####################################
+# OS-generated files              #
+####################################
+Thumbs.db
+Desktop.ini
