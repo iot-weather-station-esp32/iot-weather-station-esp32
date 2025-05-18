@@ -3,6 +3,7 @@ import { PressureForecast } from "~/components/PressureForecast"
 import { RadiationUV } from "~/components/RadiationUV"
 import { TemperatureHumidity } from "~/components/TemperatureHumidity"
 import { Wind } from "~/components/Wind"
+import { MQAirQuality } from "~/components/mq135";
 
 export function Welcome() {
   return (
@@ -24,6 +25,7 @@ export function Welcome() {
           <Wind />
           <Precipitation />
           <RadiationUV />
+          <MQAirQuality />
         </div>
       </div>
     </div>

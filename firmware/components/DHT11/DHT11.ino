@@ -1,29 +1,24 @@
 #include <DHT.h>
 
-#define DHTPIN 15        // Pin para transferir la DATA
-#define DHTTYPE DHT22    // Cambiar a DHT11
+#define DHTPIN 4        // GPIO4 (pin D4 en tu placa)
+#define DHTTYPE DHT11
 
 DHT dht(DHTPIN, DHTTYPE);
 
 void setup() {
   Serial.begin(115200);
   dht.begin();
+  delay(2000);          // tiempo mínimo para que el sensor se estabilice
 }
 
 void loop() {
-  float temp = dht.readTemperature();
-  float hum = dht.readHumidity();
+  float t = dht.readTemperature();
+  float h = dht.readHumidity();
 
-  if (isnan(temp) || isnan(hum)) {
-    Serial.println("Error al leer del sensor DHT!");
-    return;
+  if (isnan(t) || isnan(h)) {
+    Serial.println("Lectura fallida");
+  } else {
+    Serial.printf("Temp: %.1f °C  |  Humedad: %.0f %%\n", t, h);
   }
-
-  Serial.print("Temperatura: ");
-  Serial.print(temp);
-  Serial.print(" °C | Humedad: ");
-  Serial.print(hum);
-  Serial.println(" %");
-
-  delay(2000);
+  delay(2500);          // DHT11 ≥ 1 s entre lecturas; pongo 2,5 s por seguridad
 }
