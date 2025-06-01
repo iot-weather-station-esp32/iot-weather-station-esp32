@@ -1,7 +1,13 @@
+import { AirQuality } from "~/components/AirQuality"
+import { AmbientLux } from "~/components/AmbientLux"
+import { AtmosphericPressure } from "~/components/AtmosphericPressure"
+import { Environment } from "~/components/Environment"
+import { LightSwitch } from "~/components/LightSwitch"
 import { Precipitation } from "~/components/Precipitation"
 import { PressureForecast } from "~/components/PressureForecast"
 import { RadiationUV } from "~/components/RadiationUV"
 import { TemperatureHumidity } from "~/components/TemperatureHumidity"
+import { TempHumidity } from "~/components/TempHumidity"
 import { Wind } from "~/components/Wind"
 
 export function Welcome() {
@@ -17,10 +23,13 @@ export function Welcome() {
             24º
           </p>
         </div>
-        
         <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
           <TemperatureHumidity />
           <PressureForecast />
+          <AirQuality />
+          <LightSwitch />
+          <AmbientLux />
+          <Environment />
           <Wind />
           <Precipitation />
           <RadiationUV />
